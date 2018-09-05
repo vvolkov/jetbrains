@@ -1,0 +1,87 @@
+<application>
+  <component name="dataSourceStorage" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="RedshiftSpaceman" uuid="63115416-6eaa-4070-ae92-295fbd9d7da5">
+      <driver-ref>redshift</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:redshift://jewelbox-backup.cit562lelvpp.us-east-1.redshift.amazonaws.com:5439/rockman</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="RedshiftMarketing" uuid="e3dcbcab-3e36-42a4-aa95-8adf4b883019">
+      <driver-ref>redshift</driver-ref>
+      <jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:redshift://helix-redshift.sam-media.com:5439/rockman</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="RedshiftItopr" uuid="5287b227-0fdc-4881-97a4-e095210bf3d3">
+      <driver-ref>redshift</driver-ref>
+      <jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:redshift://helix-redshift.sam-media.com:5439/rockman</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MysqlJB" uuid="fb5375af-37c9-460e-9966-df175b6a2976">
+      <driver-ref>mysql</driver-ref>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://jb5.sam-media.com:3306</jdbc-url>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="CitusProduction" uuid="a67bf7bd-73ad-418d-b047-c031d2864084">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://c.fii4qfcvaerh65h77ohjlvmw754.db.citusdata.com:5432/citus</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="MysqlDBOps" uuid="db874be5-92e1-4458-a697-f399e1f50960">
+      <driver-ref>mysql</driver-ref>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://dbops.sam-media.com:3306</jdbc-url>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="MysqlYamatoDBOps" uuid="15e0111f-fcd8-4883-9c0b-ef4b56248e1a">
+      <driver-ref>mysql</driver-ref>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://yamato-dbops.sam-media.com:3306</jdbc-url>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="RedshiftPersonal" uuid="5664cf35-30a8-49b4-87b0-d26285a391c6">
+      <driver-ref>redshift</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:redshift://jbtest.c6boxspr2exe.us-east-1.redshift.amazonaws.com:5439/rockman</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="HelixSpaceman" uuid="3949d73c-437a-442b-bfe4-fe800454ca0a">
+      <driver-ref>redshift</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:redshift://helix.cxt4ik3igcpy.eu-central-1.redshift.amazonaws.com:5439/rockman</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="postgres@localhost" uuid="d7816109-0f25-4032-9c3e-9272b80b7901">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
+      <driver-properties>
+        <property name="ssl" value="false" />
+        <property name="sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
+      </driver-properties>
+    </data-source>
+  </component>
+</application>

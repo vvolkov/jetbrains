@@ -1,0 +1,38 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="494261ee-6af5-47a4-a1bd-e9fdf63a23f4" name="jmeservicios" url="http://vozftp.jmeservicios.com">
+        <fileTransfer host="vozftp.jmeservicios.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="507def50-f4a3-4f04-a1e2-949fdac3bb2d" name="us-charlie-eupixel" url="http://us-charlie-eupixel.sam-media.com">
+        <fileTransfer host="us-charlie-eupixel.sam-media.com" port="21" rootFolder="/home/ftpuser">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="362e73a1-c64d-400f-b98f-16ce7165bace" name="nl-ha-ads" url="http://nl-ha-ads.sam-media.com">
+        <fileTransfer host="nl-ha-ads.sam-media.com" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="6e2b2ed7-86a4-4532-b89a-3f0b833c4c5d" name="ftp.cm.nl" url="http://ftp.cm.nl">
+        <fileTransfer host="ftp.cm.nl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</application>

@@ -1,0 +1,15 @@
+<application>
+  <component name="DiffManager" COMPARISON_POLICY="Ignore spaces" />
+  <component name="TextDiffSettings">
+    <option name="PLACES_MAP">
+      <entry key="Default">
+        <PlaceSettings>
+          <option name="HIGHLIGHT_POLICY" value="BY_LINE" />
+          <option name="IGNORE_POLICY" value="IGNORE_WHITESPACES" />
+          <option name="SHOW_INDENT_LINES" value="true" />
+          <option name="SHOW_WHITESPACES" value="true" />
+        </PlaceSettings>
+      </entry>
+    </option>
+  </component>
+</application>

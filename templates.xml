@@ -1,0 +1,24 @@
+<application>
+  <component name="TemplateSettings">
+    <option name="deletedKeys">
+      <list>
+        <TemplateKey>
+          <option name="groupName" value="SQL" />
+          <option name="key" value="sel" />
+        </TemplateKey>
+        <TemplateKey>
+          <option name="groupName" value="SQL" />
+          <option name="key" value="selw" />
+        </TemplateKey>
+        <TemplateKey>
+          <option name="groupName" value="SQL" />
+          <option name="key" value="selc" />
+        </TemplateKey>
+        <TemplateKey>
+          <option name="groupName" value="SQL" />
+          <option name="key" value="upd" />
+        </TemplateKey>
+      </list>
+    </option>
+  </component>
+</application>

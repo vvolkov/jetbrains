@@ -1,0 +1,134 @@
+<templateSet group="SQL">
+  <template name="s" value="SELECT&#10;*&#10;FROM $table$&#10;WHERE &#10;    $END$;" description="select all rows from a table" toReformat="true" toShortenFQNames="false">
+    <variable name="table" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="scs" value="select count(*) from ($SELECTION$);" description="select the number of specific rows in a table" toReformat="true" toShortenFQNames="false">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="ey" value="EXTRACT(YEAR from $timestamp$) &quot;year&quot;" description="Extract year" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;timestamp&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="em" value="EXTRACT(MONTH from $timestamp$) &quot;month&quot;" description="Extract month" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;timestamp&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="g1" value="GROUP BY 1&#10;HAVING true&#10;ORDER BY 2 DESC&#10;LIMIT 5000" description="Group by and order by one column" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="g2" value="GROUP BY 1, 2&#10;HAVING true&#10;ORDER BY 1, 2&#10;LIMIT 5000" description="Group by and order by two columns" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="g3" value="GROUP BY 1, 2, 3&#10;HAVING true&#10;ORDER BY 1, 2, 3&#10;LIMIT 5000" description="Group by and order by three columns" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="tb" value="&quot;timestamp&quot; between '$today$ 00:00:00' and '$today$ 23:59:59'" description="Timestamp between" toReformat="false" toShortenFQNames="true">
+    <variable name="today" expression="date(&quot;yyy-MM-dd&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="tg" value="$timestamp$ &gt;= '$today$ 00:00:00'" description="Timestamp greater than" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;\&quot;timestamp\&quot;&quot;" alwaysStopAt="true" />
+    <variable name="today" expression="date(&quot;yyy-MM-dd&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="ta" value="CONVERT_TIMEZONE('UTC', 'Europe/Amsterdam', $timestamp$)" description="Amsterdam tz timestamp" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;timestamp&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="tk" value="CONVERT_TIMEZONE('UTC', 'Asia/Kuala_Lumpur', $timestamp$)" description="Kuala Lumpur tz timestamp" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;\&quot;timestamp\&quot;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="ctl" value="create table $table$_tmp (LIKE $table$ INCLUDING DEFAULTS);&#10;INSERT INTO $table$_tmp SELECT * FROM $table$;" description="create table like definition" toReformat="true" toShortenFQNames="false">
+    <variable name="table" expression="completeSmart()" defaultValue="&quot;table&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="va" value="VACUUM $table$; ANALYSE $table$;" description="VACUUM and ANALYSE" toReformat="false" toShortenFQNames="true">
+    <variable name="table" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="tl" value="$timestamp$ &lt; '$today$ 00:00:00'" description="Timestamp less than" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;\&quot;timestamp\&quot;&quot;" alwaysStopAt="true" />
+    <variable name="today" expression="date(&quot;yyy-MM-dd&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="up" value="update $table_name$ &#10;set $col$ = $value$ &#10;where $END$;" description="update values in a table" toReformat="true" toShortenFQNames="false">
+    <variable name="table_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="col" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="sc1" value="select $alias$.$select_col1$, count(*)&#10;from $table$ $alias$&#10;where $alias$.$where_col1$&#10;group by 1&#10;having true&#10;order by 1&#10;limit 5000;" description="select the number of specific rows in a table" toReformat="true" toShortenFQNames="false">
+    <variable name="table" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="alias" expression="complete()" defaultValue="&quot;alias&quot;" alwaysStopAt="true" />
+    <variable name="select_col1" expression="complete()" defaultValue="&quot;select_col1&quot;" alwaysStopAt="true" />
+    <variable name="where_col1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="sc2" value="select $alias$.$select_col1$, $alias$.$select_col2$, count(*)&#10;from $table$ $alias$&#10;where $alias$.$where$&#10;group by 1, 2&#10;having true&#10;order by 1, 2&#10;limit 5000;" description="select the number of specific rows in a table" toReformat="true" toShortenFQNames="false">
+    <variable name="table" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="alias" expression="complete()" defaultValue="&quot;alias&quot;" alwaysStopAt="true" />
+    <variable name="select_col1" expression="complete()" defaultValue="&quot;select_col1&quot;" alwaysStopAt="true" />
+    <variable name="select_col2" expression="complete()" defaultValue="&quot;select_col2&quot;" alwaysStopAt="true" />
+    <variable name="where" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="e" value="$col$ = '$END$' AND" description="Equals where defenition" toReformat="false" toShortenFQNames="true">
+    <variable name="col" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="th" value="date_trunc('hour', $timestamp$) &quot;hour&quot;" description="date_trunc hour" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;\&quot;timestamp\&quot;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="td" value="date_trunc('day', $timestamp$) &quot;day&quot;" description="date_trunc day" toReformat="false" toShortenFQNames="true">
+    <variable name="timestamp" expression="completeSmart()" defaultValue="&quot;\&quot;timestamp\&quot;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+  <template name="c" value="COUNT(*)" description="count all" toReformat="true" toShortenFQNames="false">
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+</templateSet>
