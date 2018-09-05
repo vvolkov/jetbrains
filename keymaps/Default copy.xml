@@ -1,4 +1,0 @@
-<keymap version="1" name="Default copy" parent="Default for XWin">
-  <action id="GotoBookmark1" />
-  <action id="ToggleBookmark1" />
-</keymap>
