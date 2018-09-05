@@ -1,0 +1,10 @@
+<application>
+  <component name="ActionMacroManager">
+    <macro name="Run query with reconnection">
+      <action id="ActivateDatabaseToolWindow" />
+      <action id="DatabaseView.CloseConnectionAction" />
+      <shortuct text="ENTER" />
+      <action id="Console.Jdbc.Execute" />
+    </macro>
+  </component>
+</application>
